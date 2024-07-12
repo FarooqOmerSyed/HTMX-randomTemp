@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://unpkg.com/htmx.org@2.0.1"
+        integrity="sha384-QWGpdj554B4ETpJJC9z+ZHJcA/i59TyjxEPXiiUgN2WmTyV5OEZWCD6gQhgkdpB/"
+        crossorigin="anonymous"></script>
+    <title>random-weather</title>
+</head>
+
+<body class="bg-blue-700 h-screen flex items-center justify-center">
+
+
+
+    <div class="text-center p-4">
+
+        <h1 class="text-white text-xl font-semibold">Weather in San Fransisco</h1>
+        <h2 class="font-bold text-3xl text-white tracking-tighter mt-6" hx-get="/get-temperature" hx-trigger="every 5s">
+            Loading...</h2>
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            htmx.config.selfRequestsOnly = false;
+        });
+    </script>
+
+</body>
+
+</html>
